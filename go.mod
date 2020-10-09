@@ -8,5 +8,6 @@ require (
 	github.com/huandu/xstrings v1.3.2 // indirect
 	github.com/imdario/mergo v0.3.11 // indirect
 	github.com/mitchellh/reflectwalk v1.0.1 // indirect
+	github.com/stretchr/testify v1.5.1
 	golang.org/x/crypto v0.0.0-20201002170205-7f63de1d35b0 // indirect
 )

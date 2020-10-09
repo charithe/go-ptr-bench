@@ -16,22 +16,14 @@ type S{{ $i }} struct {
 	{{- end }}
 }
 
+//go:noinline
 func primitivePassByValue{{ $i }}(s S{{ $i }}) uint64 {
-	var total uint64
-	{{- range $n := until $i }}
-	total += s.f{{ $n }}
-	{{- end }}
-
-	return total
+	return s.f0 * 2
 }
 
+//go:noinline
 func primitivePassByPtr{{ $i }}(s *S{{ $i }}) uint64 {
-	var total uint64
-	{{- range $n := until $i }}
-	total += s.f{{ $n }}
-	{{- end }}
-
-	return total
+    return s.f0 * 2
 }
 {{- end }}
 
